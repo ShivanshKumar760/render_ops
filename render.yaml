@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     region: oregon
-    branch: main
+    branch: master
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT --timeout 30"
     healthCheckPath: /
