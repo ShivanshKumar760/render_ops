@@ -4,7 +4,10 @@ import shutil
 import subprocess
 import tempfile
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
+
+
+
 
 app = Flask(__name__)
 
@@ -43,6 +46,10 @@ def apply_limits():
 @app.route("/")
 def health():
     return jsonify(status="ok", service="code-runner")
+
+@app.route("/home")
+def home():
+    return render_template("index.html")
 
 
 @app.route("/execute", methods=["POST"])
