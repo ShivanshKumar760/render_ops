@@ -2,9 +2,9 @@ name: CI/CD - Deploy code-runner to Render
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
   workflow_dispatch: {}
 
 jobs:

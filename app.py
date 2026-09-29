@@ -45,7 +45,7 @@ def apply_limits():
 
 @app.route("/")
 def health():
-    return jsonify(status="ok", service="code-runner")
+    return jsonify(status="ok", service="code-runner executor")
 
 @app.route("/home")
 def home():
