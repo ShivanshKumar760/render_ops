@@ -10,3 +10,13 @@ services:
     startCommand: "npm start"
     healthCheckPath: /health
     autoDeploy: false          # deploys are triggered by the GitHub Action
+    envVars:
+      - key: NODE_VERSION      # built-in fetch() needs Node 18+
+        value: 20
+      # Secrets: values are NOT stored in this file. Render prompts for them
+      # the first time the blueprint is applied; set them in the dashboard
+      # (Environment tab) afterwards.
+      - key: CLOUDFLARE_TURN_KEY_ID
+        sync: false
+      - key: CLOUDFLARE_TURN_API_TOKEN
+        sync: false
