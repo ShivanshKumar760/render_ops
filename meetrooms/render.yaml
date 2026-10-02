@@ -2,6 +2,7 @@ services:
   - type: web
     name: chat-video
     runtime: node
+    repo: https://github.com/ShivanshKumar760/meetrooms
     plan: free
     region: oregon
     branch: main
