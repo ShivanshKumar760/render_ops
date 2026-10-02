@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: chat-video
+    runtime: node
+    plan: free
+    region: oregon
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    healthCheckPath: /health
+    autoDeploy: false          # deploys are triggered by the GitHub Action
